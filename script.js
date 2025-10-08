@@ -21,7 +21,7 @@ function login() {
   }
 
   // Kirim token ke GAS lewat proxy (tanpa menunggu respon)
-  fetch("https://databasepilketos.vercel.app/api/proxy", {
+  fetch("https://datapilketosv2.vercel.app/api/proxy", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ token, kandidat: "Login Check" })
@@ -101,7 +101,7 @@ function kirimVote(kandidat, redirectPage) {
   }
 
   // Kirim data ke GAS tanpa menunggu respon
-  fetch("https://databasepilketos.vercel.app/api/proxy", {
+  fetch("https://datapilketosv2.vercel.app/api/proxy", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ token, kandidat })
@@ -136,3 +136,4 @@ window.onload = function () {
     }
   }, 1000);
 };
+
